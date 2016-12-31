@@ -6,6 +6,7 @@
     <!-- Fonts and CSS libraries -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -21,20 +22,23 @@
         </div>
     </header>
 
+
+    <section class="about">
+        <div class="about-content container wow fadeInUp">
+            <h3>Hi, I'm <span>Adriel.</span></h3>
+            <p>You probably know me by my undercover name, willy washinga. That is perfectly fine,
+            but my real name was given to me upon the sacrifice of the pure onyx, which delivered from
+            the wrath of team rocket, allowing me to code this very website. Luck? Destiny? Fate? Are all these
+            concepts controlled by a true loving God? If so, then why try to make our world </p>
+        </div>
+    </section>
+
+
     <div class="container">
-        <section class="about">
-            <div class="about-content">
-                <h3>Hi, I'm Adriel.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque aliquam lectus vel orci rutrum, vel consequat justo laoreet. Quisque viverra, nunc sed porta laoreet, diam mi finibus erat, ut luctus turpis nunc ut est. Quisque malesuada feugiat risus ac sagittis. Integer auctor tellus at lacus posuere aliquam. Nam ultricies mattis aliquet. Praesent cursus sit amet ex nec dictum. Aliquam dapibus a lorem in gravida. </p>
-            </div>
-        </section>
-
-        <hr/>
-
         <section class="portfolio">
-            <h3 style="text-align: center">Work</h3>
+            <h3 style="text-align: center" class="wow fadeIn">Work</h3>
                 <div class="row" style="margin: 5% auto;">
-                    <div id="work1" class="col-lg-3 col-lg-offset-1 thumbnail text-center">
+                    <div id="work1" class="col-lg-3 col-lg-offset-1 thumbnail text-center wow fadeInLeft">
                         <a href="#">
                             <img src="img/computer.jpg" id="image1" class="image-responsive">
                             <div class="caption" id="caption1">
@@ -42,7 +46,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-3 thumbnail text-center">
+                    <div class="col-lg-3 thumbnail text-center wow fadeInDown">
                         <a href="#">
                             <img src="img/computer.jpg" id="image2" class="image-responsive">
                             <div class="caption" id="caption2">
@@ -50,7 +54,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-3 thumbnail text-center">
+                    <div class="col-lg-3 thumbnail text-center wow fadeInRight">
                         <a href="#">
                             <img src="img/computer.jpg" id="image3" class="image-responsive">
                             <div class="caption" id="caption3">
@@ -64,27 +68,30 @@
 
     <section class="contact">
         <div class="contact-content">
-            <h4>Have a project in mind? Email me:<a class="email" href="mailto:adriel.fab@gmail.com">adriel.fab@gmail.com</a></h4>
+            <h4>Have a project in mind? Email me:<a class="email" href="mailto:adriel.fab@gmail.com">a_fabell@live.concordia.ca</a></h4>
         </div>
     </section>
 
     <div class="image-divider">
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <p class="credit">&copy; Copyright 2016 Marisa Blair.<br>Designed and Developed by Marisa Blair.</p>
-            <ul class="social">
-                <li><a href="#" target="_blank">twitter.</a></li>
-                <li><a href="#" target="_blank">pinterest.</a></li>
-                <li><a href="#" target="_blank">youtube.</a></li>
-                <li><a href="#" target="_blank">linkedin.</a></li>
-            </ul>
-        </div>
+    <footer class="footer-basic-centered">
+
+        <p class="footer-links">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </p>
+
+        <p class="footer-company-name">Developed by<br/> Adriel Fabella, 2016</p>
+
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascript/jquery.waypoints.min.js"></script>
+    <script type="text/javascript" src="javascript/wow.min.js"></script> <!--Licensing in other folder-->
     <script type="text/javascript" src="javascript/script.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>

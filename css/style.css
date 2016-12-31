@@ -37,12 +37,6 @@ p,a,li,blockquote {
     font-weight: 300;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 /* Override the default bootstrap behavior where horizontal description lists
    will truncate terms that are too long to fit in the left column
 */
@@ -62,8 +56,8 @@ textarea {
 header {
     background:
             linear-gradient(
-                    rgba(104,174,200, 1.0),
-                    rgba(104,174,200, 0.90)
+                    rgba(1, 24, 51, 1),
+                    rgba(1, 24, 51, 0.7)
             ),
             url("../img/computer.jpg");
     background-size: cover;
@@ -108,13 +102,29 @@ header {
 }
 .about {
     padding:4% 0;
+    background:
+            linear-gradient(
+                    rgba(0,0,0, 0.7),
+                    rgba(104,104,104, 0.90)
+            ),
+            url("../img/concordia.jpg"); /** I do not own this image, taken from https://www.flickr.com/photos/concordiauniversity/5279916243 **/
+    background-attachment: fixed;
 }
+
+.about h3{
+    color: #fff;
+}
+
+.about h3 span{
+    color: rgba(104,174,200, 1.0);
+}
+
 .about p {
     font-family: proxima-nova,sans-serif;
     font-style: normal;
     font-weight: 300;
     line-height: 1.8;
-    color: #616569;
+    color: #fff;
     letter-spacing: .03em;
     margin: 10px auto;
     font-size:1.5em;
@@ -144,7 +154,7 @@ header {
 
 .contact {
     width:100%;
-    background-color:#011833;
+    background-color:  rgba(1, 24, 51, 1);
     padding:5% 0;
     margin-top:5%;
     clear:both;
@@ -162,7 +172,7 @@ header {
     letter-spacing:0.04em;
 }
 .contact-content a {
-    color:#E0CCC8;
+    color: rgba(104,174,200, 1.0);
     text-decoration:none;
 }
 
@@ -175,49 +185,36 @@ header {
 }
 
 /**Footer**/
-footer {
-    background-color:#E0CCC8;
-    color:#fff;
-    padding:2% 0;
-    width:100%;
-    clear:both;
-    height:100px;
+.footer-basic-centered{
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font: normal 18px sans-serif;
+    padding: 45px;
+    margin-top: 0;
 }
 
-.footer-content {
-    max-width:960px;
-    padding:2% 0;
-    margin:0 auto;
-    font-family: proxima-nova,sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.4;
-    color: #fff;
-    letter-spacing: .03em;
-    font-size:1em;
+
+.footer-basic-centered .footer-company-name{
+    color:  #8f9296;
+    font-size: 14px;
+    margin: 0;
 }
 
-.credit {
-    float:left;
-}
 
-.social {
-    float:right;
-}
-
-.social li {
-    display:inline;
-}
-
-.social li a {
-    color:#fff;
-    padding:0.2em;
-    font-size:1.8em;
-    font-weight:600;
-}
-
-.social li a:hover {
-    color:#011833;
+.footer-basic-centered .footer-links a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color:  #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 10px auto;
 }
 
 /**Media Queries**/
@@ -292,11 +289,4 @@ footer {
     left: 0;
     width: 100%;
     visibility: visible;
-}
-
-.hidden {
-    opacity: 0;
-}
-.visible {
-    opacity: 1;
 }
