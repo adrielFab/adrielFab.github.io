@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <!-- Fonts and CSS libraries -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link href="css/reset.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -14,84 +11,13 @@
 </head>
 
 <body>
-    <header>
-        <div class="intro">
-            <h1 class="animated bounce">Adriel Fabella</h1>
-            <h2>Software Engineering Student</h2>
-        </div>
-    </header>
-
-
-    <section class="about">
-        <div class="about-content container wow fadeInUp">
-            <h3>Hi, I'm <span>Adriel.</span></h3>
-            <p>You probably know me by my undercover name, willy washinga. That is perfectly fine,
-            but my real name was given to me upon the sacrifice of the pure onyx, which delivered from
-            the wrath of team rocket, allowing me to code this very website. Luck? Destiny? Fate? Are all these
-            concepts controlled by a true loving God? If so, then why try to make our world </p>
-        </div>
-    </section>
-
-
-    <div class="container">
-        <section class="portfolio">
-            <h3 style="text-align: center" class="wow fadeIn">Work</h3>
-                <div class="row" style="margin: 5% auto;">
-                    <div id="work1" class="col-lg-3 col-lg-offset-1 thumbnail text-center wow fadeInLeft">
-                        <a href="#">
-                            <img src="img/computer.jpg" id="image1" class="image-responsive">
-                            <div class="caption" id="caption1">
-                                <p>Lorem ipsum</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 thumbnail text-center wow fadeInDown">
-                        <a href="#">
-                            <img src="img/computer.jpg" id="image2" class="image-responsive">
-                            <div class="caption" id="caption2">
-                                <p>Lorem ipsum</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-3 thumbnail text-center wow fadeInRight">
-                        <a href="#">
-                            <img src="img/computer.jpg" id="image3" class="image-responsive">
-                            <div class="caption" id="caption3">
-                                <p>Lorem ipsum</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-        </section>
-    </div><!--End of "wrapper"-->
-
-    <section class="contact">
-        <div class="contact-content">
-            <h4>Have a project in mind? Email me:<a class="email" href="mailto:adriel.fab@gmail.com">a_fabell@live.concordia.ca</a></h4>
-        </div>
-    </section>
-
-    <div class="image-divider">
-    </div>
-
-    <footer class="footer-basic-centered">
-
-        <p class="footer-links">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-        </p>
-
-        <p class="footer-company-name">Developed by<br/> Adriel Fabella, 2016</p>
-
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/663f1e011b.js"></script>
-    <script type="text/javascript" src="javascript/wow.min.js"></script> <!--Licensing in other folder-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
     <script>
-        new WOW().init();
+      $(document).ready(function() {
+          console.log('hello');
+          window.location.replace("submit/index.html");
+      });
     </script>
 </body>
 </html>
