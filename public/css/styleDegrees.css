@@ -1,0 +1,78 @@
+i {
+  border: solid #eee;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 7px;
+}
+
+div {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-danger-study {
+    color: #fff;
+    background-color: rgba(220, 53, 69, 0.6);
+    border-color: #dc3545;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.col-sm {
+  height: 450px;
+  margin: 40px 0;
+}
+
+.row {
+  margin: 10px 0;
+}
+
+.wrapper {
+    text-align: center;
+    background: lightblue;
+    border-radius: 5%;
+    width: auto;
+    margin: 0 auto;
+    padding: 6px 6px 27px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 3.5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
+
+.fader-enter-active, .fader-leave-active {
+  transition: opacity 0.5s
+}
+.fader-enter, .fader-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0
+}
+#arrow1 {
+    position: absolute;
+    top: 187px;
+    left: 509px;
+}
+
+#arrow {
+  width: 180px;
+  height: 200px;
+  position: absolute;
+  border-bottom: 5px solid #eee;
+  top: 0;
+  left: 352px;
+}

@@ -4,13 +4,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Career Path</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans|Dosis:400,800" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans|Dosis:400,800|Homemade+Apple" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/styleCareer.css">
+
+    <script src="https://use.fontawesome.com/e1b001fcec.js"></script>
     <link rel="stylesheet" href="public/css/headers.css">
+    <link rel="stylesheet" href="public/css/styleCareer.css">
+    <style>
+      html, body {
+        height: 100%;
+      }
+      .fa, p { color: rgba(255,255,255,0.8); }
+      h1, h4 { text-align: left; color: #fff; }
+      h1 { font-family: 'Homemade Apple', cursive; }
+      h4 { font-weight: 200; }
+      body {
+          background-image: url("./public/img/road.jpg"); /* fallback */
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+      i { text-align: center; margin-top: 40px;     background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 50%; width: 55%; }
+      i span { font-family: 'Dosis', sans-serif; font-size: 35px; }
+      body { padding-bottom: 50px; }
+      @media (max-width: 768px) {
+         h4 { display: none; }
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">AF</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -41,249 +66,42 @@
  -->        </ul>
       </div>
     </nav>
-    <div class="container" id="index">
-        <h1>Career Path</h1>
-        <h2>Figure out what you want to do! Each achievement displays what jobs you can do or where it can take you!</h2>
-        <div class="row">
-              <div class="col-sm">
-                <transition name="fader">
-                  <div class="wrapper" v-show="level == 1" style="background: rgba(173, 236, 230, 1)">
-                    <h6>Diplome d'&eacutetudes coll&eacutegiales<br/><small>DEC</small></h6>
-                      <p>
-                        DEC is the diploma you earn when you graduate from Cegep/College
-                      </p>
-                      <hr>
-                      <div class="row">
-                        <div class="col">
-                          Possible jobs and opportunities with this degree
-                        </div>
-                        <div class="col">
-                          Further studying
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" @click="jobLevel = 1">See Jobs</button>
-                        </div>
-                        <div class="col">
-                          <button @click="level++" type="button" class="btn btn-danger btn-danger-study">Keep going</button>
-                        </div>
-                      </div>
-                  </div>
-                </transition>
-                <transition name="fade">
-                  <div class="wrapper" v-show="level == 2" style="background: rgba(173, 216, 230, 0.3)">
-                    <h6>Bachelor Degree<br/><small>B.A, B.Sc, BEng ...</small></h6>
-                      <p>
-                        Bachelor's degree is the first certificate you are able to get
-                        when you pursue your career in University. You are called an Undergraduate
-                        Student when you are pursuing this degree.                      
-                      </p>
-                      <hr>
-                      <div class="row">
-                        <div class="col">
-                          Possible jobs and opportunities with this degree
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" @click="jobLevel = 3">See Jobs</button>
-                        </div>
-                      </div>
-                  </div>
-                </transition>
-              </div>
-              <div class="col-sm">
-                <transition name="fader">
-                  <div class="wrapper" v-show="level == 0" style="background: rgba(223, 216, 230, 1)">
-                    <h6>Diplome d'&eacutetudes secondaires<br/><small>DES</small></h6>
-                      <p>
-                        DES is the diploma you earn when you graduate from highschool
-                      </p>
-                      <hr>
-                      <div class="row">
-                        <div class="col">
-                          Possible jobs and opportunities with this degree
-                        </div>
-                        <div class="col">
-                          Further studying
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" @click="jobLevel = 0">See Jobs</button>
-                        </div>
-                        <div class="col">
-                          <button @click="level++" type="button" class="btn btn-danger btn-danger-study">Keep going</button>
-                        </div>
-                      </div>
-                  </div>
-                </transition>
-                <transition name="fade">                 
-                  <div class="wrapper" v-show="level == 2" style="background: rgba(173, 216, 230, 0.6)">
-                    <h6>Master Degree<br/><small>M.A, M.Sc, M.Eng</small></h6>
-                      <p>
-                        Master's degree is the certificate you are able to get
-                        after completion of the Bachlor's degree. You are called a
-                        Graduate Student when you are pursuing this degree.                     
-                      </p>
-                      <hr>
-                      <div class="row">
-                        <div class="col">
-                          Overiew and brief description about this degree
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" @click="jobLevel = 4">Details</button>
-                        </div>
-                      </div>
-                  </div>
-                </transition>
-              </div>
-              <div class="col-sm">
-                <transition name="fader">
-                  <div class="wrapper" v-show="level == 1" style="background: rgba(173, 236, 230, 1)">
-                    <h6>Trade School Certificate<br/><small>(Vocational School)</small></h6>
-                      <p>
-                        A trade of vocational school is a type of education institution designed to provide education 
-                        in a <strong>specific job</strong>. You learn and gain specific skills to succeed in that
-                      </p>
-                      <hr>
-                      <div class="row">
-                        <div class="col">
-                          Possible jobs and opportunities with this degree
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" @click="jobLevel = 2">See Jobs</button>
-                        </div>
-                      </div>
-                  </div>
-                </transition>
-                <transition name="fade">
-                  <div class="wrapper" v-show="level == 2" style="background: rgba(173, 216, 230, 1)">
-                    <h6>Doctorate Degree<br/><small>Eng.D, Ph.D (Dr.)</small></h6>
-                      <p>
-                        Doctorate degree is the final education certificate you are able 
-                        to get after completion of Master's. After receiving this degree, you can be
-                        called ... Dr.                    
-                      </p>
-                      <hr>
-                      <div class="row">
-                        <div class="col">
-                          Overiew and brief description about this degree
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" @click="jobLevel = 5">Details</button>
-                        </div>
-                      </div>
-                  </div>
-                </transition>
-              </div>
-
-              <!-- The Modal -->
-              <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                      <h4 class="modal-title">Jobs and Opportunities</h4>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                      {{ getJobDescription }} <br/><br/>
-                      {{ exampleDescription }}
-                      <ul>
-                        <li v-for="job in getJobLists">
-                          {{ job }}
-                        </li>
-                      </ul>
-                      <div v-if="jobLevel == 1">
-                        If you want to learn more, you can visit the <strong>program of study</strong> section in 
-                        different cegep websites like <a href="https://www.dawsoncollege.qc.ca/about-dawson/programs-of-study">Dawson</a>
-                        or <a href="http://www.vaniercollege.qc.ca/admissions/program/career-programs/">Vanier</a>
-                      </div>
-                      <div v-if="jobLevel == 2">
-                        You can take look at the different schools and the specific programs they offer by clicking <a href="https://www.trade-schools.ca/zip-search-results.aspx?z=H3S+1V2&c=0&ct=3&P=1">here.</a>
-                      </div>
-                      <div v-if="jobLevel == 3">
-                        If you want to learn more, you can visit the <strong>program of study</strong> section in 
-                        different university websites like <a href="http://www.mcgill.ca/science/programs">McGill</a>
-                        or <a href="https://connect2.concordia.ca/concordia/program.do?programAction=ProgramList">Concordia</a>
-                      </div>
-                      <div v-if="jobLevel == 5">
-                        However, you have to make sure you consider the cons as well in your field. A PhD won't necessarily get you a job and you will be 
-                        spending a lot more time and money.
-                      </div>
-                    </div>
-
-                    <!-- Modal footer -->
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
+    <div id="pageCareerPath">
+        <div class="container">
+          <div class="row">
+            <div class="col-8" style="position: relative; top: 50px; left: 50px;">
+              <h1>Know your <br/>path!</h1>
+              <h4>There is more nothing more annoying than <br/> not knowing what to do</h4>              
+            </div>
+            <div class="col" style="text-align: center;">
+              <a href="degrees.html">
+                <i class="fa fa-4x fa-graduation-cap" aria-hidden="true">
+                  <br/><span>DEGREES</span>
+                </i><br/>
+              </a>
+              <a href="tips.html">
+                <i class="fa fa-4x fa-check" aria-hidden="true">
+                  <br/><span>TIPS</span>
+                </i>
+              </a>
+            </div>
+          </div>
         </div>
-  </body>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script src="public/js/vue.js" type="text/javascript"></script>
-  <script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/vue" type="text/javascript"></script>
+    <script>
       new Vue({
-          el: '#index',
+        el: '#pageCareerPath',
 
-          data: {
-            jobDescription: {
-              0: `With a DES, you have great chances of getting a job in the customer service or factory side. Evidently, the more experience you have ( also includes volunteer work - displays proactivity) , the better are your chances of getting a job. In fortunate cases, you are able to work your way up and 
-                get promoted, like upgrading to Manager.`,
-              1: `If you want to study in University, you have to go through Cegep and graduate from a Pre-University program (~ 2 years). However, there are many technical programs you can get into in Cegep where you will be able to work upon graduation (~ 4 years). Compared to a vocational certificate, you are going to earn much more later, and the door is open for you to continue your studies.`,
-              2: `Vocational school lets you work in very specific jobs. It's a great alternative to pursuing studies in Cegep or University as you can
-                  get a job early on in your career in a lesser time for a lesser price.`,
-              3: `All your hard work and studying is done and you are now entitled as a worker for that program. Many jobs require people to have a bachelor degree or higher such as medicine, dental, law or education. You can continue pursuing your studies at the
-                  Master degree level which is the next level after Bachelor.`,
-              4: `A Master degree means you have deeper knowledege in your specialty. Some advantages of pursuing a master's degree, generally speaking, are higher salary, more opportunities and be able to work in Master degree required jobs such as being a teacher for a Cegep.`,
-              5: `Doctorate degree is the final boss. These degrees are research-based meaning you are able to contribute new information in your field of study. Some
-                  pros of having a Doctorate degree are`,
-            },
-            jobLists: {
-              0: ['Sales person (Ex: retail, drug stores)', 'Factory worker', 'Delivery Driver', 'Customer Service Representative', 'Call Center'],
-              1: ['Computer Science Technology', 'Engineering Technology', 'Graphic Design', 'Nursing',  'Photography', 'Social Service'],
-              2: ['Dental Assisting', 'Plumber', 'Culinary', 'Game Design', 'Business'],
-              3: ['Business', 'Engineering', 'Education', 'Medical and Health', 'Psychology'],
-              5: ['You are called Dr.', 'Heightens your knowledge and intellectual satisfaction', 'Some jobs require a PhD', 'You will be recognized as an expert']
-            },
-            jobLevel: 0,
-            level: 0,
-
-          },
-
-          computed: { 
-              exampleDescription() {
-                if (this.jobLevel == 4 || this.jobLevel == 5) {
-                  return '';
-                }
-                return this.jobLevel == 0 ? 'Example of jobs' : 'Example of programs'
-              },
-
-              getJobDescription() {
-                return this.jobDescription[this.jobLevel];
-              },
-
-              getJobLists() {
-                return this.jobLists[this.jobLevel];
-              }
+        data : {
+          backgroundHeight: {
+            'height': $(window).height() + 'px'
           }
+        }
       });
-  </script>
-</html>
+    </script>
+  </body>
+</html> 
